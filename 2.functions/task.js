@@ -11,24 +11,27 @@ function getArrayParams(...arr) {
     let avg = Number((sum / arr.length).toFixed(2));
     return { min: min, max: max, avg: avg };
 }
-
+// подправил
 function summElementsWorker(...arr) {
   let summ = 0;
-  for (let i = 0; i < arr.length; i++)
-  sum += arr[i]
+  for (let i = 0; i < arr.length; i++) {
+  summ += arr[i]
+  }
+  return summ;
 }
-
+// подправил
 function differenceMaxMinWorker(...arr) {
-  let minElement = 0;
-  let maxElement = 0;
+  let minElement = Infinity;
+  let maxElement = -Infinity;
 
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] > maxElement) {
       maxElement = arr[i];
-    } else if (arr[i] < minElement) {
+    } if (arr[i] < minElement) {
       minElement = arr[i];
     }
   }
+  return arr[i];
 }
 
 function differenceEvenOddWorker(...arr) {
