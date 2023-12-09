@@ -15,7 +15,7 @@ Student.prototype.addMarks = function (...marks) {
         console.log("Студент отчислен и не имеет массива оценок.");
         return;
       }
-    this.marks = this.marks.concat(marksToAdd);  
+    this.marks = this.marks.concat(...marks);  
 }
 
 Student.prototype.getAverage = function () {
